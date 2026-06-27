@@ -1,119 +1,50 @@
-# Stock Movement Classification — CS207 Section 5, Team 4
+# CS207 Section 5 — Team 4 Project: Stock Movement Classification
 
-Predicting next-day price direction for **SPY, NVDA, MU, and TSLA** as a 5-class quantile problem, using 10 years of daily OHLCV data from Yahoo Finance, 25 stationary technical features, a multinomial logistic regression baseline, and a TensorFlow LSTM.
+A group project for CS207 exploring machine learning approaches to predicting stock price direction.
 
 ---
 
-## Problem Framing
+## Project Overview
 
-| | |
-|---|---|
-| **Task** | Multi-class classification of next-day return quintile (Worst 20% / 20–40% / 40–60% / 60–80% / Best 20%) |
-| **Input** | 25 stationary technical indicators computed from daily OHLCV bars |
-| **Output** | One of 5 quintile labels for the next trading day |
-| **Labeled data** | Next-day forward return, quintile-binned per symbol; label is never leaked into features |
-| **Train/val/test split** | Chronological: 70% train · 15% val · 15% test (no shuffling) |
-| **Evaluation metric** | Macro F1 (all 5 classes weighted equally) and accuracy |
-| **Baseline** | Majority-class (most-frequent) classifier |
+This project frames next-day stock movement as a multi-class classification problem. Each team member is independently exploring different models and feature engineering approaches on the same underlying dataset (daily OHLCV bars for SPY, NVDA, MU, and TSLA from Yahoo Finance), with the goal of merging findings into a final combined analysis.
+
+---
+
+## Team Members & Notebooks
+
+| Team Member | Notebook | Description |
+|---|---|---|
+| Pallavi | `Pallavi_Stock_Classification_Full_YahooDataSet.ipynb` | Full pipeline with 25 technical features, logistic regression baseline, and TensorFlow LSTM |
+| Pallavi (prior) | `Pallavi_Stock_Classification_Full.ipynb` | Earlier version of Pallavi's notebook |
+| Neil | `Neil_stock_ML.ipynb` | Neil's ML exploration |
+| Ron | `Ron_Stock_ML.ipynb` | Data pipeline, EDA, and expanded features |
+| Vansh | `stock_data_puller_vansh.ipynb` | Baseline and logistic regression work |
 
 ---
 
 ## Dataset
 
-- **Source:** Yahoo Finance via `yfinance` (no API key required)
+- **Source:** Yahoo Finance via `yfinance` (free, no API key required)
 - **Symbols:** SPY, NVDA, MU, TSLA
-- **Date range:** 2016-06-20 to 2026-06-20 (~10 years of daily bars)
-- **Train rows (daily):** ~6,240 | **Test rows:** ~1,504
-
----
-
-## Features (25 stationary indicators)
-
-All features are stationary — returns, ratios, and bounded indicators — so the scaler trained on 2016 prices generalises to 2025 prices.
-
-| Group | Features |
-|---|---|
-| Returns | ret_1, ret_lag1, ret_lag2, ret_lag3 |
-| Momentum | mom_10, mom_20, mom_50, mom_200 |
-| Price-to-MA distance | price_to_ma10, price_to_ma20, price_to_ma50, price_to_ma200 |
-| MA crossover | ma_cross (50/200 golden/death cross signal) |
-| Oscillators | rsi_14, macd, macd_hist, bb_pct |
-| Volatility | volatility_20 |
-| Volume | vol_ratio20, vol_ratio50 |
-| Extra indicators | atr_14, adx_14, mfi_14, cmf_20, gap |
-
-Started with 32 candidates; 7 removed as redundant via correlation analysis.
-
----
-
-## Models
-
-### 1. Majority-Class Baseline
-Predicts the most frequent class for every sample. Sets the lower bound for both accuracy and Macro F1.
-
-### 2. Multinomial Logistic Regression
-Trained on the last day of each sliding window (flat feature vector). Serves as an interpretable linear baseline.
-
-### 3. TensorFlow LSTM
-- Architecture: LSTM(64) -> Dropout -> Dense(32) -> Dense(5, softmax)
-- Input window: 20 trading days (~1 month) of the 25 features
-- Training: up to 30 epochs with early stopping, batch size 64
-- GPU runtime recommended
-
----
-
-## Results
-
-All three models are evaluated on the **same held-out test sequences**.
-
-| Model | Accuracy | Macro F1 |
-|---|---|---|
-| Majority baseline | 0.215 | 0.071 |
-| Logistic Regression | 0.229 | 0.215 |
-| LSTM | 0.231 | 0.212 |
-
-Both learned models beat the baseline by ~3x on Macro F1. Accuracy gains are modest because the baseline already scores 21.5% by always predicting the plurality class in a balanced 5-class problem.
-
-**Timeframe comparison (Logistic Regression):**
-
-| Timeframe | Train rows | Test rows | Majority F1 | Logistic F1 |
-|---|---|---|---|---|
-| Daily | 6,240 | 1,504 | 0.071 | 0.216 |
-| Weekly | 660 | 312 | 0.062 | 0.201 |
-
-The lift over the baseline grows at longer timeframes, suggesting technical features carry more signal at a weekly horizon.
-
----
-
-## Repo Structure
-
-```
-cs207-section5-team4-project/
-├── Pallavi_Stock_Classification_Full_YahooDataSet.ipynb   # Full pipeline: data, features, EDA, models, evaluation
-└── README.md
-```
+- **Date range:** 2016 – 2026 (~10 years of daily bars)
+- **Target:** Next-day return quintile (5-class classification)
 
 ---
 
 ## How to Run
 
-1. Open the notebook in Google Colab using the **Open in Colab** badge at the top of the notebook.
-2. Run the setup cell (Cell 1) once per session to install `yfinance`.
-3. Select **Runtime > Run all**. A GPU runtime is recommended for the LSTM training step.
-4. All configuration (symbols, date range, number of classes, LSTM knobs) lives in the single setup cell at the top.
+Each notebook is self-contained and runs end-to-end in Google Colab:
+
+1. Open the notebook of interest using the **Open in Colab** badge (or upload to Colab manually).
+2. Run **Runtime > Run all**.
+3. No API keys are needed — data is pulled automatically from Yahoo Finance.
 
 ---
 
-## Next Steps
+## Project Status
 
-1. Add Random Forest and XGBoost on the same 25 features, compared across all three timeframes.
-2. Walk-forward (expanding-window) validation so every regime is scored fully out-of-sample.
-3. Bidirectional LSTM layer and a light hyperparameter sweep (window 20 vs 30, LSTM units, dropout).
-4. Add market-wide context features (VIX, rate proxy, credit proxy), joined on the same date.
-5. Merge with teammates' work.
+Work in progress. Team members are actively developing their individual notebooks. A final merged analysis will be added here.
 
 ---
 
-## Team
-
-CS207 · Section 5 · Team 4
+*CS207 · Section 5 · Team 4*
