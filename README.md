@@ -15,7 +15,7 @@ This project frames next-day stock movement as a multi-class classification prob
 | Team Member | Notebook | Description |
 |---|---|---|
 | Pallavi | `Pallavi_Stock_Classification_Full_YahooDataSet.ipynb` | Full pipeline with 25 technical features, logistic regression baseline, and TensorFlow LSTM |
-| Pallavi (prior) | `Pallavi_Stock_Classification_Full.ipynb` | Earlier version of Pallavi's notebook |
+| Pallavi (prior) | `Pallavi_Stock_Classification_Full.ipynb` | Earlier version of Pallavi's notebook | - Removed
 | Neil | `Neil_stock_ML.ipynb` | Neil's ML exploration |
 | Ron | `Ron_Stock_ML.ipynb` | Data pipeline, EDA, and expanded features |
 | Vansh | `stock_data_puller_vansh.ipynb` | Baseline and logistic regression work |
