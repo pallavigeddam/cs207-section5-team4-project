@@ -1,0 +1,399 @@
+{
+  "manifest_type": "phase4_es_spy_windowed_quote",
+  "quoted_at_utc": "2026-07-30T21:32:49.464673+00:00",
+  "phase": "Phase 4 ES to SPY cross-asset replication",
+  "purpose": "development-only replication of the NQ cross-asset pipeline using ES futures as an incremental signal on top of the SPY LOB baseline",
+  "locked_test": false,
+  "clock": "UTC",
+  "dates": [
+    "2026-05-26",
+    "2026-05-27",
+    "2026-05-28",
+    "2026-05-29",
+    "2026-06-01",
+    "2026-06-02",
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-05"
+  ],
+  "windows_utc": [
+    {
+      "tag": "am",
+      "start": "13:30:00",
+      "end": "15:00:00"
+    },
+    {
+      "tag": "pm",
+      "start": "18:30:00",
+      "end": "20:00:00"
+    }
+  ],
+  "items": [
+    {
+      "window": {
+        "date": "2026-05-26",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-26T13:30:00+00:00",
+        "end": "2026-05-26T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-26_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-26_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.254112750292,
+      "quoted_billable_size_bytes": 151584160
+    },
+    {
+      "window": {
+        "date": "2026-05-26",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-26T18:30:00+00:00",
+        "end": "2026-05-26T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-26_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-26_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.114124909043,
+      "quoted_billable_size_bytes": 68078160
+    },
+    {
+      "window": {
+        "date": "2026-05-27",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-27T13:30:00+00:00",
+        "end": "2026-05-27T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-27_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-27_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.361420422792,
+      "quoted_billable_size_bytes": 215595680
+    },
+    {
+      "window": {
+        "date": "2026-05-27",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-27T18:30:00+00:00",
+        "end": "2026-05-27T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-27_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-27_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.121263340116,
+      "quoted_billable_size_bytes": 72336400
+    },
+    {
+      "window": {
+        "date": "2026-05-28",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-28T13:30:00+00:00",
+        "end": "2026-05-28T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-28_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-28_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.303240224719,
+      "quoted_billable_size_bytes": 180889840
+    },
+    {
+      "window": {
+        "date": "2026-05-28",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-28T18:30:00+00:00",
+        "end": "2026-05-28T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-28_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-28_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.097460344434,
+      "quoted_billable_size_bytes": 58137360
+    },
+    {
+      "window": {
+        "date": "2026-05-29",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-29T13:30:00+00:00",
+        "end": "2026-05-29T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-29_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-29_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.328026518226,
+      "quoted_billable_size_bytes": 195675440
+    },
+    {
+      "window": {
+        "date": "2026-05-29",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-05-29T18:30:00+00:00",
+        "end": "2026-05-29T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-05-29_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-05-29_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.16564437747,
+      "quoted_billable_size_bytes": 98810720
+    },
+    {
+      "window": {
+        "date": "2026-06-01",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-01T13:30:00+00:00",
+        "end": "2026-06-01T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-01_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-01_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.25950036943,
+      "quoted_billable_size_bytes": 154798000
+    },
+    {
+      "window": {
+        "date": "2026-06-01",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-01T18:30:00+00:00",
+        "end": "2026-06-01T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-01_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-01_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.094484835863,
+      "quoted_billable_size_bytes": 56362400
+    },
+    {
+      "window": {
+        "date": "2026-06-02",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-02T13:30:00+00:00",
+        "end": "2026-06-02T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-02_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-02_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.227228432894,
+      "quoted_billable_size_bytes": 135547040
+    },
+    {
+      "window": {
+        "date": "2026-06-02",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-02T18:30:00+00:00",
+        "end": "2026-06-02T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-02_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-02_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.083689212799,
+      "quoted_billable_size_bytes": 49922560
+    },
+    {
+      "window": {
+        "date": "2026-06-03",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-03T13:30:00+00:00",
+        "end": "2026-06-03T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-03_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-03_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.276318356395,
+      "quoted_billable_size_bytes": 164830320
+    },
+    {
+      "window": {
+        "date": "2026-06-03",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-03T18:30:00+00:00",
+        "end": "2026-06-03T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-03_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-03_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.134738489985,
+      "quoted_billable_size_bytes": 80374640
+    },
+    {
+      "window": {
+        "date": "2026-06-04",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-04T13:30:00+00:00",
+        "end": "2026-06-04T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-04_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-04_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.301913335919,
+      "quoted_billable_size_bytes": 180098320
+    },
+    {
+      "window": {
+        "date": "2026-06-04",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-04T18:30:00+00:00",
+        "end": "2026-06-04T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-04_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-04_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.111291959882,
+      "quoted_billable_size_bytes": 66388240
+    },
+    {
+      "window": {
+        "date": "2026-06-05",
+        "tag": "am"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-05T13:30:00+00:00",
+        "end": "2026-06-05T15:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-05_am.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-05_am.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.424905493855,
+      "quoted_billable_size_bytes": 253466000
+    },
+    {
+      "window": {
+        "date": "2026-06-05",
+        "tag": "pm"
+      },
+      "request": {
+        "dataset": "GLBX.MDP3",
+        "symbols": [
+          "ES.c.0"
+        ],
+        "schema": "mbp-1",
+        "stype_in": "continuous",
+        "start": "2026-06-05T18:30:00+00:00",
+        "end": "2026-06-05T20:00:00+00:00"
+      },
+      "raw_output": "data/raw/cross_asset/glbx-mdp3/mbp-1/ES/2026-06-05_pm.dbn.zst",
+      "file_receipt": "data/receipts/cross_asset/phase4_es_spy_windows/2026-06-05_pm.dbn.zst.receipt.json",
+      "quoted_cost_usd": 0.397299528122,
+      "quoted_billable_size_bytes": 236998400
+    }
+  ],
+  "total_quoted_cost_usd": 4.056662902236,
+  "total_quoted_billable_size_bytes": 2419893680,
+  "suggested_max_cost_usd": 4.06,
+  "authoritative_plan_receipt": "data/receipts/cross_asset/phase4_es_spy_windowed_2026-05-26_2026-06-05_download.json",
+  "supersedes_quote_without_deleting": "data/quotes/cross_asset/phase4_es_spy_2026-05-26_2026-06-05_quote.json",
+  "downloaded": false
+}

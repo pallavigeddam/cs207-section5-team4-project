@@ -1,0 +1,98 @@
+{
+  "measurement": "DL-0",
+  "ticker": "QQQ",
+  "bin_ms": 50,
+  "event_ms_map": {
+    "dt_ms_per_midchange": 115.96883843903463,
+    "frac_50ms_bins_with_midchange": 0.4311503044525641,
+    "midchanges_per_second": 8.623006089051282,
+    "note": "rawbins are 50ms aggregated bins; 'H events' in Bri24/Kol23 sense are per-message. Here horizons are swept in ms; a mid-change occurs ~every 116ms."
+  },
+  "native_1000ms_anchor": {
+    "hgb_baseline_accuracy": 0.5432259111940905,
+    "hgb_baseline_balanced_accuracy": 0.5431273605994209,
+    "hgb_baseline_mcc": 0.08626677678771115,
+    "n": 12319,
+    "base_rate_up": 0.5052358145953405
+  },
+  "horizon_sweep_persistence": [
+    {
+      "horizon_ms": 250,
+      "horizon_bins": 5,
+      "n_labeled": 12256,
+      "n_scored": 9943,
+      "base_rate_up": 0.5051795232827114,
+      "persistence_accuracy": 0.503570351000704,
+      "persistence_balanced_accuracy": 0.5035170734944459,
+      "persistence_mcc": 0.007034146988891749,
+      "persistence_coverage": 0.8112761096605744
+    },
+    {
+      "horizon_ms": 500,
+      "horizon_bins": 10,
+      "n_labeled": 12295,
+      "n_scored": 10841,
+      "base_rate_up": 0.5039203025551149,
+      "persistence_accuracy": 0.49857024259754634,
+      "persistence_balanced_accuracy": 0.49862765552119886,
+      "persistence_mcc": -0.002744899831460254,
+      "persistence_coverage": 0.8817405449369663
+    },
+    {
+      "horizon_ms": 750,
+      "horizon_bins": 15,
+      "n_labeled": 12312,
+      "n_scored": 11275,
+      "base_rate_up": 0.5051884700665189,
+      "persistence_accuracy": 0.4964079822616408,
+      "persistence_balanced_accuracy": 0.49645868032408846,
+      "persistence_mcc": -0.007082601239853559,
+      "persistence_coverage": 0.9157732293697206
+    },
+    {
+      "horizon_ms": 1000,
+      "horizon_bins": 20,
+      "n_labeled": 12319,
+      "n_scored": 11467,
+      "base_rate_up": 0.5031830470044475,
+      "persistence_accuracy": 0.4937647161419726,
+      "persistence_balanced_accuracy": 0.49384135710698174,
+      "persistence_mcc": -0.012320631417712682,
+      "persistence_coverage": 0.9308385420894553
+    },
+    {
+      "horizon_ms": 1500,
+      "horizon_bins": 30,
+      "n_labeled": 12317,
+      "n_scored": 11699,
+      "base_rate_up": 0.4990170100008548,
+      "persistence_accuracy": 0.49645268826395417,
+      "persistence_balanced_accuracy": 0.49643948282522493,
+      "persistence_mcc": -0.00712166190483568,
+      "persistence_coverage": 0.9498254445075911
+    },
+    {
+      "horizon_ms": 2000,
+      "horizon_bins": 40,
+      "n_labeled": 12314,
+      "n_scored": 11777,
+      "base_rate_up": 0.49791967394073194,
+      "persistence_accuracy": 0.5025897936656194,
+      "persistence_balanced_accuracy": 0.5025741169882809,
+      "persistence_mcc": 0.00514833642810179,
+      "persistence_coverage": 0.9563910995614747
+    },
+    {
+      "horizon_ms": 3000,
+      "horizon_bins": 60,
+      "n_labeled": 12315,
+      "n_scored": 11892,
+      "base_rate_up": 0.49781365623948876,
+      "persistence_accuracy": 0.5051294988227379,
+      "persistence_balanced_accuracy": 0.5051064313643852,
+      "persistence_mcc": 0.010213338390338958,
+      "persistence_coverage": 0.9656516443361753
+    }
+  ],
+  "interpretation": "Every DL-n model must beat the persistence_balanced_accuracy at its horizon by a real margin; the raw accuracy is not the edge."
+}

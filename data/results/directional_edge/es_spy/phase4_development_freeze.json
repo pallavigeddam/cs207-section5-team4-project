@@ -1,0 +1,145 @@
+{
+  "manifest_type": "phase4_es_spy_development_freeze",
+  "frozen_at_utc": "2026-07-30T21:12:06Z",
+  "status": "awaiting_capped_data_purchase_approval",
+  "locked_test_used": false,
+  "es_data_downloaded": false,
+  "approved_max_cost_usd": null,
+  "research_scope": {
+    "objective": "Incremental honest next-one-second SPY direction from ES on top of the matched SPY LOB baseline",
+    "target_dataset": "XNAS.ITCH",
+    "target_schema": "mbp-10",
+    "target_scope": "XNAS single-venue SPY book; not consolidated NBBO and not SPY's primary ARCA book",
+    "leader_dataset": "GLBX.MDP3",
+    "leader_schema": "mbp-1",
+    "leader_symbol": "ES.c.0",
+    "leader_stype_in": "continuous"
+  },
+  "development_split": {
+    "train_dates": [
+      "2026-05-26",
+      "2026-05-27",
+      "2026-05-28",
+      "2026-05-29",
+      "2026-06-01",
+      "2026-06-02",
+      "2026-06-03"
+    ],
+    "validation_dates": [
+      "2026-06-04",
+      "2026-06-05"
+    ],
+    "sessions_per_date": 2,
+    "windows_utc": {
+      "am": [
+        "13:30:00",
+        "15:00:00"
+      ],
+      "pm": [
+        "18:30:00",
+        "20:00:00"
+      ]
+    }
+  },
+  "protocol": {
+    "target": "sign(mean(SPY mid[t+1:t+21]) - SPY mid[t])",
+    "horizon_ms": 1000.0,
+    "history_window_ms": 5000.0,
+    "sample_stride_ms": 1750.0,
+    "target_clock": "ts_recv",
+    "leader_clock": "max(ts_recv, ts_event + delay)",
+    "strict_asof": "leader_available_ts < SPY decision_ts",
+    "primary_delay_ms": 10,
+    "declared_delay_sensitivity_ms": [
+      0,
+      5,
+      10,
+      25
+    ],
+    "model_seeds": [
+      11,
+      22,
+      33,
+      42,
+      123
+    ],
+    "primary_population": "all finite nonzero honest future-mean moves",
+    "secondary_coverage": [
+      1.0,
+      0.7,
+      0.5,
+      0.3
+    ],
+    "controls": [
+      "five-minute block label shuffle",
+      "causal 60-second ES lag placebo",
+      "per-date and per-session slices",
+      "latency sensitivity",
+      "strict no-future-or-exact alignment audit"
+    ]
+  },
+  "purchase_gate": {
+    "location": "feature_exploration/es_spy_phase4_study.py:evaluate_purchase_gate",
+    "primary_auc_lift_minimum": 0.005,
+    "full_coverage_directional_metrics_must_be_nonnegative": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "mcc"
+    ],
+    "all_validation_dates_positive": true,
+    "minimum_positive_validation_sessions_fraction": 0.75,
+    "minimum_positive_seed_count": 4,
+    "all_declared_delays_positive": true,
+    "ternary_macro_f1_mcc_guardrail": true,
+    "calibration_guardrail": true,
+    "coverage_guardrail": true,
+    "shuffle_and_lag_placebo_guardrails": true,
+    "interpretation": "A pass permits quoting a separate locked confirmation block; it is not final evidence of an edge."
+  },
+  "owned_target_input": {
+    "path": "data/interim/es_spy/spy_receive_rawbins.npz",
+    "sha256": "fe552712082afd467ca6eb890d6fb7fb318c35b7212f8ce62d235a5583866339",
+    "bytes": 78538125,
+    "bins": 1943995,
+    "sessions": 18,
+    "clock": "ts_recv"
+  },
+  "es_quote": {
+    "path": "data/quotes/cross_asset/phase4_es_spy_windowed_2026-05-26_2026-06-05_quote.json",
+    "sha256": "be8cfb0a9b6831896924db84e0aabf1855e9efd162c439e3e6d81864934dbcf4",
+    "request_count": 18,
+    "total_quoted_cost_usd": 4.056662902236,
+    "suggested_max_cost_usd": 4.06,
+    "total_quoted_billable_size_bytes": 2419893680,
+    "downloaded": false,
+    "superseded_full_span_quote_usd": 9.745851516724,
+    "savings_usd": 5.689188614488
+  },
+  "code": {
+    "study": {
+      "path": "feature_exploration/es_spy_phase4_study.py",
+      "sha256": "994cc07d600c7445be4dcd06962cb15a4a115c3af6427d6b749d69ed7bac1efa"
+    },
+    "frozen_phase1_dependency": {
+      "path": "feature_exploration/nq_phase1_robustness.py",
+      "sha256": "1a667f275e33bcb03a55164eac41106e6e9d753cf8167467e859d65347b19669"
+    },
+    "target_cache_builder": {
+      "path": "feature_exploration/build_receive_rawbins.py",
+      "sha256": "eb6c0c8d1014d0ffdb4ad6659f0dad35e7c9e2fa7422c559cae967fc48b63760"
+    },
+    "downloader": {
+      "path": "pull_es_phase4.py",
+      "sha256": "dc2e986ab175f22f91832620edb717ee0efb920e0131083fca2cd4e0dedffc30"
+    }
+  },
+  "validation": {
+    "phase4_phase1_and_downloader_tests": "44 passed, 4 subtests passed",
+    "full_feature_exploration_suite": "110 passed, 7 subtests passed",
+    "runtime_compile": "passed",
+    "preflight_without_es": "refused as designed",
+    "network_calls_by_study_runner": 0,
+    "credit_spent_for_phase4": 0.0
+  }
+}

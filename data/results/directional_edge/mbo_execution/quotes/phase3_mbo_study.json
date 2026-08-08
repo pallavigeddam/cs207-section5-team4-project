@@ -1,0 +1,193 @@
+{
+  "manifest_type": "phase3_mbo_quote",
+  "quoted_at_utc": "2026-07-30T09:18:18.211534+00:00",
+  "phase": "Phase 3 MBO queue/fill/toxicity execution study",
+  "plan": "study",
+  "purpose": "record-preserving XNAS QQQ MBO replay; MBP-10 supplies arrival depth and post-fill markouts",
+  "items": [
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-06T14:30:00-04:00",
+        "end": "2026-07-06T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-06_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.044702875614,
+      "quoted_billable_size_bytes": 39999456
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-07T14:30:00-04:00",
+        "end": "2026-07-07T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-07_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.067850705981,
+      "quoted_billable_size_bytes": 60711784
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-08T14:30:00-04:00",
+        "end": "2026-07-08T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-08_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.058429053426,
+      "quoted_billable_size_bytes": 52281432
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-09T14:30:00-04:00",
+        "end": "2026-07-09T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-09_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.028148925304,
+      "quoted_billable_size_bytes": 25187232
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-10T14:30:00-04:00",
+        "end": "2026-07-10T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-10_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.024494343996,
+      "quoted_billable_size_bytes": 21917168
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-13T14:30:00-04:00",
+        "end": "2026-07-13T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-13_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.044449532032,
+      "quoted_billable_size_bytes": 39772768
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-14T14:30:00-04:00",
+        "end": "2026-07-14T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-14_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.041679775715,
+      "quoted_billable_size_bytes": 37294432
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-15T14:30:00-04:00",
+        "end": "2026-07-15T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-15_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.051251381636,
+      "quoted_billable_size_bytes": 45858960
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-16T14:30:00-04:00",
+        "end": "2026-07-16T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-16_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.061267402768,
+      "quoted_billable_size_bytes": 54821144
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-17T14:30:00-04:00",
+        "end": "2026-07-17T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-17_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.081399393082,
+      "quoted_billable_size_bytes": 72834944
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-20T14:30:00-04:00",
+        "end": "2026-07-20T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-20_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.069734448195,
+      "quoted_billable_size_bytes": 62397328
+    },
+    {
+      "request": {
+        "dataset": "XNAS.ITCH",
+        "symbols": [
+          "QQQ"
+        ],
+        "schema": "mbo",
+        "stype_in": "raw_symbol",
+        "start": "2026-07-21T14:30:00-04:00",
+        "end": "2026-07-21T14:45:06-04:00"
+      },
+      "output": "data/raw/xnas-itch/mbo/QQQ/2026-07-21_midafternoon.dbn.zst",
+      "quoted_cost_usd": 0.022178077698,
+      "quoted_billable_size_bytes": 19844608
+    }
+  ],
+  "total_quoted_cost_usd": 0.5955859154469999,
+  "total_quoted_billable_size_bytes": 532921256,
+  "suggested_max_cost_usd": 0.6,
+  "authoritative_download_receipt": "data/receipts/mbo_execution/phase3_mbo_study_download.json"
+}

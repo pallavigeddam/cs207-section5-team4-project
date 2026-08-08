@@ -1,0 +1,338 @@
+{
+  "created_at_utc": "2026-07-30T09:58:14.724450+00:00",
+  "phase": "Phase 3 MBO development policy decision",
+  "status": "rejected_no_predeclared_selector_and_negative_development",
+  "decision": {
+    "policy_frozen": false,
+    "selected_rule": null,
+    "confirmation_purchase_recommended": false,
+    "confirmation_data_accessed": false,
+    "reasons": [
+      "The protocol fixed a rule family but did not predeclare a threshold grid, objective, or tie-breaker before development outcomes were observed.",
+      "Unfiltered train and validation gross markouts are negative on every development date before fees.",
+      "An explicitly post-hoc exhaustive train-only diagnostic finds no coverage-feasible threshold pair with positive aggregate training gross markout."
+    ]
+  },
+  "unfiltered": {
+    "train": {
+      "eligible_quotes": 8895,
+      "proven_fills": 156,
+      "conservative_fill_rate": 0.017537942664418212,
+      "gross_1s_bps_sum": -12.724553094250998,
+      "gross_1s_bps_per_eligible_opportunity": -0.001430528734598201,
+      "adverse_midpoint_move_rate_on_fills": 0.6538461538461539,
+      "positive_days": 0,
+      "date_count": 5,
+      "by_date": {
+        "2026-07-06": {
+          "eligible_quotes": 1777,
+          "proven_fills": 20,
+          "gross_1s_bps_per_eligible_opportunity": -0.00015567271809029343,
+          "positive": false
+        },
+        "2026-07-07": {
+          "eligible_quotes": 1772,
+          "proven_fills": 40,
+          "gross_1s_bps_per_eligible_opportunity": -0.004125660931208603,
+          "positive": false
+        },
+        "2026-07-08": {
+          "eligible_quotes": 1780,
+          "proven_fills": 25,
+          "gross_1s_bps_per_eligible_opportunity": -0.0007924280979354511,
+          "positive": false
+        },
+        "2026-07-09": {
+          "eligible_quotes": 1779,
+          "proven_fills": 52,
+          "gross_1s_bps_per_eligible_opportunity": -0.0010103399492148498,
+          "positive": false
+        },
+        "2026-07-10": {
+          "eligible_quotes": 1787,
+          "proven_fills": 19,
+          "gross_1s_bps_per_eligible_opportunity": -0.001079650095201222,
+          "positive": false
+        }
+      }
+    },
+    "validation": {
+      "eligible_quotes": 3557,
+      "proven_fills": 89,
+      "conservative_fill_rate": 0.02502108518414394,
+      "gross_1s_bps_sum": -9.14427671177208,
+      "gross_1s_bps_per_eligible_opportunity": -0.002570783444411605,
+      "adverse_midpoint_move_rate_on_fills": 0.6966292134831461,
+      "positive_days": 0,
+      "date_count": 2,
+      "by_date": {
+        "2026-07-13": {
+          "eligible_quotes": 1773,
+          "proven_fills": 52,
+          "gross_1s_bps_per_eligible_opportunity": -0.002694382884409623,
+          "positive": false
+        },
+        "2026-07-14": {
+          "eligible_quotes": 1784,
+          "proven_fills": 37,
+          "gross_1s_bps_per_eligible_opportunity": -0.002447946108583978,
+          "positive": false
+        }
+      }
+    },
+    "horizon_sensitivity": {
+      "100ms": {
+        "train": {
+          "gross_bps_per_eligible_opportunity": -0.0008243088523328156,
+          "positive_dates": 1,
+          "date_count": 5
+        },
+        "validation": {
+          "gross_bps_per_eligible_opportunity": -0.004050334009972924,
+          "positive_dates": 0,
+          "date_count": 2
+        },
+        "overall": {
+          "gross_bps_per_eligible_opportunity": -0.0017458452710387153,
+          "positive_dates": 1,
+          "date_count": 7
+        }
+      },
+      "500ms": {
+        "train": {
+          "gross_bps_per_eligible_opportunity": -0.0009110153746886147,
+          "positive_dates": 2,
+          "date_count": 5
+        },
+        "validation": {
+          "gross_bps_per_eligible_opportunity": -0.002994743931277418,
+          "positive_dates": 0,
+          "date_count": 2
+        },
+        "overall": {
+          "gross_bps_per_eligible_opportunity": -0.0015062468616615005,
+          "positive_dates": 2,
+          "date_count": 7
+        }
+      },
+      "1s": {
+        "train": {
+          "gross_bps_per_eligible_opportunity": -0.001430528734598201,
+          "positive_dates": 0,
+          "date_count": 5
+        },
+        "validation": {
+          "gross_bps_per_eligible_opportunity": -0.002570783444411605,
+          "positive_dates": 0,
+          "date_count": 2
+        },
+        "overall": {
+          "gross_bps_per_eligible_opportunity": -0.0017562503859639474,
+          "positive_dates": 0,
+          "date_count": 7
+        }
+      },
+      "5s": {
+        "train": {
+          "gross_bps_per_eligible_opportunity": -0.0019471216482271996,
+          "positive_dates": 1,
+          "date_count": 5
+        },
+        "validation": {
+          "gross_bps_per_eligible_opportunity": -0.005035957242063419,
+          "positive_dates": 0,
+          "date_count": 2
+        },
+        "overall": {
+          "gross_bps_per_eligible_opportunity": -0.0028294689183264153,
+          "positive_dates": 1,
+          "date_count": 7
+        }
+      }
+    },
+    "seven_date_inference": {
+      "date_count": 7,
+      "equal_date_mean_gross_1s_bps_per_opportunity": -0.0017580115406634312,
+      "date_block_bootstrap_95pct_ci": [
+        -0.0027760250287423155,
+        -0.0008593277509265399
+      ],
+      "bootstrap_seed": 20704,
+      "bootstrap_resamples": 10000
+    }
+  },
+  "post_hoc_train_family_diagnostic": {
+    "label": "post_hoc_diagnostic_not_a_selector",
+    "rule_family": {
+      "type": "ahead_imbalance_threshold_v1",
+      "condition": "initial_ahead_shares <= max_ahead and side_aligned_touch_imbalance >= min_imbalance",
+      "minimum_daily_coverage": 0.25
+    },
+    "threshold_source": "Every distinct eligible training-set breakpoint; validation outcomes are not used.",
+    "ahead_threshold_count": 744,
+    "imbalance_threshold_count": 4289,
+    "threshold_pair_count": 3191016,
+    "coverage_feasible_pair_count": 1486027,
+    "positive_aggregate_gross_pair_count": 0,
+    "positive_gross_on_at_least_4_of_5_days_pair_count": 0,
+    "full_training_gate_pair_count": 0,
+    "maximum_positive_train_days": 3,
+    "best_gross_per_submission_diagnostic": {
+      "max_initial_ahead_shares": 1205,
+      "min_aligned_touch_imbalance": 0.3571428656578064,
+      "submissions": 3019,
+      "coverage_of_train_eligible": 0.33940415964024734,
+      "minimum_daily_coverage": 0.29943820224719103,
+      "proven_fills": 34,
+      "gross_1s_bps_per_submission": -0.0004618731558327974,
+      "gross_1s_bps_per_scheduled_opportunity": -0.00015676167031581961,
+      "adverse_midpoint_move_rate_on_fills": 0.6470588235294118,
+      "positive_train_days": 2,
+      "by_date": {
+        "2026-07-06": {
+          "coverage": 0.33877321328081034,
+          "gross_1s_bps_per_submission": -0.00022967250280884243,
+          "positive": false
+        },
+        "2026-07-07": {
+          "coverage": 0.3306997742663657,
+          "gross_1s_bps_per_submission": -0.0059936173187276846,
+          "positive": false
+        },
+        "2026-07-08": {
+          "coverage": 0.29943820224719103,
+          "gross_1s_bps_per_submission": 0.004103395382511487,
+          "positive": true
+        },
+        "2026-07-09": {
+          "coverage": 0.3636874648679033,
+          "gross_1s_bps_per_submission": 0.0001066904408090474,
+          "positive": true
+        },
+        "2026-07-10": {
+          "coverage": 0.3642977056519306,
+          "gross_1s_bps_per_submission": -1.6768165814899526e-08,
+          "positive": false
+        }
+      },
+      "interpretation": "Post-hoc diagnostic only; this threshold pair is not selected or eligible to be frozen."
+    },
+    "best_gross_per_scheduled_opportunity_diagnostic": {
+      "max_initial_ahead_shares": 925,
+      "min_aligned_touch_imbalance": 0.3571428656578064,
+      "submissions": 2652,
+      "coverage_of_train_eligible": 0.2981450252951096,
+      "minimum_daily_coverage": 0.2580101180438449,
+      "proven_fills": 34,
+      "gross_1s_bps_per_submission": -0.0005257899915004582,
+      "gross_1s_bps_per_scheduled_opportunity": -0.00015676167031581956,
+      "adverse_midpoint_move_rate_on_fills": 0.6470588235294118,
+      "positive_train_days": 2,
+      "by_date": {
+        "2026-07-06": {
+          "coverage": 0.30388294879009564,
+          "gross_1s_bps_per_submission": -0.00025604230868689473,
+          "positive": false
+        },
+        "2026-07-07": {
+          "coverage": 0.31376975169300225,
+          "gross_1s_bps_per_submission": -0.006317013936644646,
+          "positive": false
+        },
+        "2026-07-08": {
+          "coverage": 0.29606741573033707,
+          "gross_1s_bps_per_submission": 0.004150113356505925,
+          "positive": true
+        },
+        "2026-07-09": {
+          "coverage": 0.2580101180438449,
+          "gross_1s_bps_per_submission": 0.0001503893577417291,
+          "positive": true
+        },
+        "2026-07-10": {
+          "coverage": 0.318970341354225,
+          "gross_1s_bps_per_submission": -1.915101043070104e-08,
+          "positive": false
+        }
+      },
+      "interpretation": "Post-hoc diagnostic only; this threshold pair is not selected or eligible to be frozen."
+    },
+    "best_equal_date_scheduled_diagnostic": {
+      "max_initial_ahead_shares": 925,
+      "min_aligned_touch_imbalance": 0.3571428656578064,
+      "submissions": 2652,
+      "coverage_of_train_eligible": 0.2981450252951096,
+      "minimum_daily_coverage": 0.2580101180438449,
+      "proven_fills": 34,
+      "gross_1s_bps_per_submission": -0.0005257899915004582,
+      "gross_1s_bps_per_scheduled_opportunity": -0.00015676167031581956,
+      "adverse_midpoint_move_rate_on_fills": 0.6470588235294118,
+      "positive_train_days": 2,
+      "by_date": {
+        "2026-07-06": {
+          "coverage": 0.30388294879009564,
+          "gross_1s_bps_per_submission": -0.00025604230868689473,
+          "positive": false
+        },
+        "2026-07-07": {
+          "coverage": 0.31376975169300225,
+          "gross_1s_bps_per_submission": -0.006317013936644646,
+          "positive": false
+        },
+        "2026-07-08": {
+          "coverage": 0.29606741573033707,
+          "gross_1s_bps_per_submission": 0.004150113356505925,
+          "positive": true
+        },
+        "2026-07-09": {
+          "coverage": 0.2580101180438449,
+          "gross_1s_bps_per_submission": 0.0001503893577417291,
+          "positive": true
+        },
+        "2026-07-10": {
+          "coverage": 0.318970341354225,
+          "gross_1s_bps_per_submission": -1.915101043070104e-08,
+          "positive": false
+        }
+      },
+      "interpretation": "Post-hoc diagnostic only; this threshold pair is not selected or eligible to be frozen."
+    },
+    "conclusion": "No coverage-feasible threshold pair has positive aggregate training gross markout. The post-hoc family diagnostic cannot rescue or justify freezing a policy."
+  },
+  "governance": {
+    "development_dates": [
+      "2026-07-06",
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10",
+      "2026-07-13",
+      "2026-07-14"
+    ],
+    "confirmation_dates_sealed": [
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-20",
+      "2026-07-21"
+    ],
+    "confirmation_files_present": [],
+    "frozen_policy_path_created": false,
+    "next_honest_action": "Stop this policy family. A materially different MBO hypothesis requires a prospectively specified selector and new development dates; do not repurpose the sealed confirmation block."
+  },
+  "provenance": {
+    "development_results_path": "data/artifacts/mbo_execution/phase3_development_results.json",
+    "development_results_sha256": "a62ffb4646fc057231862e2e1180f9739e38e2e28360140a9fc1d2740146adf6",
+    "development_evidence": {
+      "path": "data/interim/mbo_execution/phase3_development_quotes.npz",
+      "sha256": "2edc11eaad1f4ecf25c9348a0bfe9a878583b91cb4a04ec7ece52375620c9f02",
+      "bytes": 535738
+    },
+    "protocol_sha256": "4a76a1763dac21644628e3375c6e7c4aca0bc6d9d2a3fd792c885592179e1f4d",
+    "implementation_sha256": {
+      "runner": "dd506e2175ecf15b3be367c7c7bc01c45f1a3bdfac22386cdec7c2b24ae02aa9",
+      "core": "51c54b9b408a8b6f5bcc97e067c6e8bc160037e39beeb129e37860fbe10c4e23"
+    },
+    "audit_script_sha256": "e193e3fafc1496b0c0d36597151ee2b05dc4cd70b48c37f5d51268b2cbc3e4f7"
+  }
+}
